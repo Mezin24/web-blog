@@ -6,6 +6,6 @@ export const buildDevServer = ({
 }: BuildOptions): DevServerConfiguration => {
   return {
     port,
-    open: true,
+    open: false,
   };
 };
