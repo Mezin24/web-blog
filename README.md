@@ -8,3 +8,4 @@
 - `i18next` internalization;
 - `Custom UI Kit`;
 - `EsLint`, `StyleLint` linting;
+- `Jest` - unit test;
