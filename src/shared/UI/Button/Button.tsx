@@ -22,6 +22,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       className={classNames(cls.Button, {}, [className, cls[theme]])}
+      type='button'
       {...otherProps}
     >
       {children}

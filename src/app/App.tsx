@@ -1,22 +1,25 @@
+import { Suspense } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
-import { AppRouter } from './providers/router';
 import { Sidebar } from 'widgets/Sidebar';
-import './styles/index.scss';
 import { useTranslation } from 'react-i18next';
-import { Suspense } from 'react';
+import { AppRouter } from './providers/router';
+import './styles/index.scss';
 
 function MyComponent() {
   const { t, i18n } = useTranslation();
 
-  const toggle = () =>
+  const toggle = () => {
     i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en');
+  };
 
   return (
     <div>
       <h1>{t('Тест')}</h1>
-      <button onClick={toggle}>{t('перевод')}</button>
+      <button type='button' onClick={toggle}>
+        {t('перевод')}
+      </button>
     </div>
   );
 }

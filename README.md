@@ -7,3 +7,4 @@
 - `React router dom`;
 - `i18next` internalization;
 - `Custom UI Kit`;
+- `EsLint`, `StyleLint` linting;
