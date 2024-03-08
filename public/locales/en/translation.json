@@ -1,5 +1,8 @@
 {
   "Тест": "Test",
   "Язык": "English",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "Something went wrong",
+  "Обновить страницу": "Reload the page",
+  "Вызвать ошибку": "Throw Error"
 }
