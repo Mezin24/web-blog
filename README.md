@@ -9,3 +9,4 @@
 - `Custom UI Kit`;
 - `EsLint`, `StyleLint` linting;
 - `Jest` - unit test;
+- `Storybook` - UI Kit;
