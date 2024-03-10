@@ -10,3 +10,4 @@
 - `EsLint`, `StyleLint` linting;
 - `Jest` - unit test;
 - `Storybook` - UI Kit;
+- `Loki` - screenshot tests;
