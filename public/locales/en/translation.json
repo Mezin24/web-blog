@@ -1,8 +1,11 @@
 {
   "Тест": "Test",
   "Язык": "English",
+  "Язык сокращение": "Eng",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "Something went wrong",
   "Обновить страницу": "Reload the page",
-  "Вызвать ошибку": "Throw Error"
+  "Вызвать ошибку": "Throw Error",
+  "Главная": "Main",
+  "О нас": "About us"
 }
