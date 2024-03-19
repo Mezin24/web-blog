@@ -28,7 +28,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({
 
   useEffect(() => {
     document.body.className = theme;
-  }, []);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={defaultValue}>
