@@ -19,6 +19,9 @@ export default {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
+  globals: {
+    __IS_DEV__: true,
+  },
 
   // All imported modules in your tests should be mocked automatically
   // automock: false,
