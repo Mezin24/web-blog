@@ -61,6 +61,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'jsx-a11y/no-autofocus': 'warn',
+    'object-curly-newline': 'off',
+    'operator-linebreak': 'off',
   },
   globals: {
     __IS_DEV__: true,
