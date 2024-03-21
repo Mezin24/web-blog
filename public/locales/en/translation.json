@@ -8,5 +8,7 @@
   "Вызвать ошибку": "Throw Error",
   "Главная": "Main",
   "О нас": "About us",
-  "Войти": "Login"
+  "Войти": "Login",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter pasword"
 }
