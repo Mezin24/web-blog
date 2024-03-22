@@ -11,3 +11,5 @@
 - `Jest` - unit test;
 - `Storybook` - UI Kit;
 - `Loki` - screenshot tests and html reports;
+- `CI Pipeline` - GitHubActions;
+- `Husky` - pre-commit hooks;
