@@ -1,21 +1,33 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { ReduxStoreWithManager } from 'app/providers/StoreProvider/config/StateSchema';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/UI/Button/Button';
 import { Input } from 'shared/UI/Input/Input';
 import { Text, TextTheme } from 'shared/UI/Text/Text';
-import { getLoginForm } from '../../model/selectors/getLoginForm/getLoginForm';
 import cls from './LoginForm.module.scss';
-import { loginFormActions } from '../../model/slice/loginSlice';
+import {
+  loginFormActions,
+  loginFormReducer,
+} from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 
-interface LoginFormProps {
+export interface LoginFormProps {
   className?: string;
 }
-export const LoginForm = ({ className }: LoginFormProps) => {
+const LoginForm = ({ className }: LoginFormProps) => {
   const { t } = useTranslation();
-  const { username, password, isLoading, error } = useSelector(getLoginForm);
+  const username = useSelector(getLoginUsername);
+  const password = useSelector(getLoginPassword);
+  const isLoading = useSelector(getLoginIsLoading);
+  const error = useSelector(getLoginError);
+  const store = useStore() as ReduxStoreWithManager;
+
   const dispatch = useDispatch();
 
   const onChangeUsername = useCallback(
@@ -35,6 +47,17 @@ export const LoginForm = ({ className }: LoginFormProps) => {
   const onLoginClick = useCallback(() => {
     dispatch(loginByUsername({ username, password }));
   }, [dispatch, password, username]);
+
+  useEffect(() => {
+    store.reducerManager.add('loginForm', loginFormReducer);
+    dispatch({ type: '@@INIT LOGIN FORM' });
+
+    return () => {
+      dispatch({ type: '@@REMOVE LOGIN FORM' });
+      store.reducerManager.remove('loginForm');
+    };
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
@@ -64,3 +87,5 @@ export const LoginForm = ({ className }: LoginFormProps) => {
     </div>
   );
 };
+
+export default LoginForm;

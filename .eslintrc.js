@@ -63,6 +63,7 @@ module.exports = {
     'jsx-a11y/no-autofocus': 'warn',
     'object-curly-newline': 'off',
     'operator-linebreak': 'off',
+    'implicit-arrow-linebreak': 'off',
   },
   globals: {
     __IS_DEV__: true,
