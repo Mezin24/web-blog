@@ -30,30 +30,11 @@
   gap: 10px;
 }
 
-.link {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.icon {
-  fill: var(--inverted-primary-color);
-}
-
-.item {
-  transition: all 0.2s;
-}
-
 .collapsed {
   width: var(--sidebar-width-collapsed);
 
   .switchers {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .item {
-    opacity: 0;
-    width: 0;
   }
 }
