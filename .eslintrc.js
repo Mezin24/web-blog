@@ -65,6 +65,7 @@ module.exports = {
     'operator-linebreak': 'off',
     'implicit-arrow-linebreak': 'off',
     'lines-between-class-members': 'off',
+    'max-len': ['error', { code: 120 }],
   },
   globals: {
     __IS_DEV__: true,
