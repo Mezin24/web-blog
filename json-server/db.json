@@ -11,12 +11,19 @@
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }
   ],
   "profile": {
-    "name": "typicode"
+    "name": "Pavel",
+    "lastname": "Mezentcev",
+    "age": 36,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Obninsk",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg"
   }
 }
