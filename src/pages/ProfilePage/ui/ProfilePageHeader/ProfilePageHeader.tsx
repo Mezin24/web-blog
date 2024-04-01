@@ -5,7 +5,7 @@ import { Button, ButtonTheme } from 'shared/UI/Button/Button';
 import { Text } from 'shared/UI/Text/Text';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProfileReadonly } from 'entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
-import { profileActions } from 'entities/Profile';
+import { profileActions, updateProfileData } from 'entities/Profile';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -21,7 +21,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   const onSave = useCallback(() => {
-    dispatch(profileActions.cancelEdit());
+    dispatch(updateProfileData());
   }, [dispatch]);
 
   const onCancelEdit = useCallback(() => {

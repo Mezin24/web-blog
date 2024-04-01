@@ -4,6 +4,11 @@
   "Отменить": "Cancel",
   "Ваше имя": "Your firstname",
   "Ваша фамилия": "Your lastname",
+  "Ваш возраст": "Your age",
+  "Город": "City",
+  "Выберите валюту": "Select currency",
+  "Введите имя пользователя": "Enter username",
+  "Введите ссылку на аватар": "Enter Avatar Link",
   "Произошла ошибка при загрузке профиля": "Error happened while lading the page",
   "Попробуйте обновить страницу": "Try to reload the page"
 }
