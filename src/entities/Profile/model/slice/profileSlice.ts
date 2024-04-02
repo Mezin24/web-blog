@@ -15,8 +15,8 @@ const profiileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
-    setReadonly: (state) => {
-      state.readonly = true;
+    setReadonly: (state, { payload }: PayloadAction<boolean>) => {
+      state.readonly = payload;
     },
     cancelEdit: (state) => {
       state.readonly = true;

@@ -1,18 +1,11 @@
 import { RuleSetRule } from 'webpack';
 import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/buildCssLoaders';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
-export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
-  const babelLoader = {
-    test: /\.(js|jsx|tsx)$/,
-    exclude: /node_modules/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: ['@babel/preset-env'],
-      },
-    },
-  };
+export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
+  const { isDev } = options;
+  const babelLoader = buildBabelLoader(options);
 
   const svgLoader = {
     test: /\.svg$/i,
@@ -37,5 +30,5 @@ export const buildLoaders = ({ isDev }: BuildOptions): RuleSetRule[] => {
     exclude: /node_modules/,
   };
 
-  return [babelLoader, fileLoader, svgLoader, scssLoader, tsLoader];
+  return [svgLoader, scssLoader, babelLoader, tsLoader, fileLoader];
 };
