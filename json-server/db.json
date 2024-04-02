@@ -1,13 +1,37 @@
 {
   "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 },
-    { "id": "3", "title": "another title", "views": 300 },
-    { "id": "4", "title": "another title", "views": 400 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 300
+    },
+    {
+      "id": "4",
+      "title": "another title",
+      "views": 400
+    }
   ],
   "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
   ],
   "users": [
     {
@@ -18,12 +42,12 @@
   ],
   "profile": {
     "name": "Pavel",
-    "lastname": "Mezentcev",
+    "lastname": "Mezencev",
     "age": 36,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Obninsk",
+    "currency": "US",
+    "country": "Armenia",
+    "city": "Обнинск",
     "username": "admin",
-    "avatar": "https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg"
+    "avatar": "https://cisoclub.ru/wp-content/uploads/hackerone-hacker-interviews-rhynorater-youtube-thumbnail.jpg"
   }
 }

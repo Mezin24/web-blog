@@ -36,6 +36,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     new DefinePlugin({
       __IS_DEV__: true,
       __API__: '',
+      __PROJECT__: JSON.stringify('storybook'),
     })
   );
 
