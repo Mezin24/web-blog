@@ -1,5 +1,5 @@
+import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import { Country } from 'shared/lib/const/common';
 
 export interface Profile {
   name?: string;

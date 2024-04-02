@@ -41,11 +41,11 @@
     }
   ],
   "profile": {
-    "name": "Pavel",
+    "name": "Test",
     "lastname": "Mezencev",
     "age": 36,
-    "currency": "RUB",
-    "country": "Russia",
+    "currency": "US",
+    "country": "Armenia",
     "city": "Обнинск",
     "username": "admin",
     "avatar": "https://cisoclub.ru/wp-content/uploads/hackerone-hacker-interviews-rhynorater-youtube-thumbnail.jpg"
