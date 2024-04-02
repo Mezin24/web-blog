@@ -53,7 +53,7 @@ module.exports = {
       'error',
       {
         ignoreComments: true,
-        code: 100,
+        code: 120,
       },
     ],
     'react-hooks/rules-of-hooks': 'error',
@@ -65,11 +65,11 @@ module.exports = {
     'operator-linebreak': 'off',
     'implicit-arrow-linebreak': 'off',
     'lines-between-class-members': 'off',
-    'max-len': ['error', { code: 120 }],
   },
   globals: {
     __IS_DEV__: true,
     __API__: true,
+    __PROJECT__: true,
   },
   overrides: [
     {

@@ -17,7 +17,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   const dispatch = useDispatch();
 
   const onEdit = useCallback(() => {
-    dispatch(profileActions.setEdit(false));
+    dispatch(profileActions.setReadonly());
   }, [dispatch]);
 
   const onSave = useCallback(() => {

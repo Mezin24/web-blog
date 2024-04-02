@@ -15,8 +15,8 @@ const profiileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
-    setEdit: (state, { payload }: PayloadAction<boolean>) => {
-      state.readonly = payload;
+    setReadonly: (state) => {
+      state.readonly = true;
     },
     cancelEdit: (state) => {
       state.readonly = true;
@@ -60,6 +60,7 @@ const profiileSlice = createSlice({
         state.data = payload;
         state.form = payload;
         state.readonly = true;
+        state.validateErrors = undefined;
       }
     );
     builder.addCase(updateProfileData.rejected, (state, { payload }) => {
