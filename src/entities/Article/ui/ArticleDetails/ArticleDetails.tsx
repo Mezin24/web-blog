@@ -1,4 +1,4 @@
-import { FC, memo, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
@@ -8,14 +8,22 @@ import {
 import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
-import cls from './ArticleDetails.module.scss';
 import {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/getArticleDetails/getArticleDetails';
-import { Text, TextAlign } from 'shared/UI/Text/Text';
+import { Text, TextAlign, TextSize } from 'shared/UI/Text/Text';
 import { Skeleton } from 'shared/UI/Skeleton/Skeleton';
+import { Avatar } from 'shared/UI/Avatar/Avatar';
+import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
+import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
+import { Icon } from 'shared/UI/Icon/Icon';
+import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import cls from './ArticleDetails.module.scss';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -26,13 +34,27 @@ const reducers: ReducerList = {
   articleDetails: articleDetailsReducer,
 };
 
-export const ArticleDetails: FC<ArticleDetailsProps> = (props) => {
+export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const { className, id } = props;
   const { t } = useTranslation('articles');
   const dispatch = useDispatch();
-  const data = useSelector(getArticleDetailsData);
+  const article = useSelector(getArticleDetailsData);
   const isLoading = useSelector(getArticleDetailsIsLoading);
   const error = useSelector(getArticleDetailsError);
+
+  const renderBlock = useCallback((block: ArticleBlock) => {
+    switch (block.type) {
+      case ArticleBlockType.TEXT:
+        return <ArticleTextBlockComponent />;
+      case ArticleBlockType.IMAGE:
+        return <ArticleImageBlockComponent />;
+      case ArticleBlockType.CODE:
+        return <ArticleCodeBlockComponent />;
+
+      default:
+        return null;
+    }
+  }, []);
 
   useEffect(() => {
     dispatch(fetchArticleById(id));
@@ -40,9 +62,9 @@ export const ArticleDetails: FC<ArticleDetailsProps> = (props) => {
 
   let content;
 
-  if (true) {
+  if (isLoading) {
     content = (
-      <div>
+      <>
         <Skeleton
           width={200}
           height={200}
@@ -53,7 +75,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = (props) => {
         <Skeleton width={600} height={24} className={cls.skeleton} />
         <Skeleton width='100%' height={200} className={cls.skeleton} />
         <Skeleton width='100%' height={200} className={cls.skeleton} />
-      </div>
+      </>
     );
   } else if (error) {
     content = (
@@ -63,7 +85,28 @@ export const ArticleDetails: FC<ArticleDetailsProps> = (props) => {
       />
     );
   } else {
-    content = <div>Article Details data</div>;
+    content = (
+      <>
+        <div className={cls.avatarWrapper}>
+          <Avatar size={200} src={article?.img || ''} className={cls.avatar} />
+        </div>
+        <Text
+          title={article?.title}
+          text={article?.subtitle}
+          className={cls.title}
+          size={TextSize.L}
+        />
+        <div className={cls.articleInfo}>
+          <Icon Svg={EyeIcon} />
+          <Text text={String(article?.views)} />
+        </div>
+        <div className={cls.articleInfo}>
+          <Icon Svg={CalendarIcon} />
+          <Text text={String(article?.createdAt)} />
+        </div>
+        {article?.blocks.map(renderBlock)}
+      </>
+    );
   }
 
   return (
@@ -73,4 +116,4 @@ export const ArticleDetails: FC<ArticleDetailsProps> = (props) => {
       </div>
     </DynamicModuleLoader>
   );
-};
+});

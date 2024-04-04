@@ -16,16 +16,16 @@ interface ArticleBlockBase {
   type: ArticleBlockType;
 }
 
-interface ArticleTextBlock extends ArticleBlockBase {
+export interface ArticleTextBlock extends ArticleBlockBase {
   title: string;
   paragraphs: string[];
 }
 
-interface ArticleCodeBlock extends ArticleBlockBase {
+export interface ArticleCodeBlock extends ArticleBlockBase {
   code: string;
 }
 
-interface ArticleImageBlock extends ArticleBlockBase {
+export interface ArticleImageBlock extends ArticleBlockBase {
   title: string;
   src: string;
 }
@@ -43,5 +43,5 @@ export interface Article {
   views: number;
   createdAt: string;
   type: ArticleType[];
-  blocks: ArticleBlock;
+  blocks: ArticleBlock[];
 }
