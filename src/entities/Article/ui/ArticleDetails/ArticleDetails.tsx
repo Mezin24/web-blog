@@ -20,10 +20,10 @@ import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg';
 import { Icon } from 'shared/UI/Icon/Icon';
 import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
-import cls from './ArticleDetails.module.scss';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -45,11 +45,29 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
       case ArticleBlockType.TEXT:
-        return <ArticleTextBlockComponent />;
+        return (
+          <ArticleTextBlockComponent
+            block={block}
+            className={cls.block}
+            key={block.id}
+          />
+        );
       case ArticleBlockType.IMAGE:
-        return <ArticleImageBlockComponent />;
+        return (
+          <ArticleImageBlockComponent
+            className={cls.block}
+            block={block}
+            key={block.id}
+          />
+        );
       case ArticleBlockType.CODE:
-        return <ArticleCodeBlockComponent />;
+        return (
+          <ArticleCodeBlockComponent
+            className={cls.block}
+            block={block}
+            key={block.id}
+          />
+        );
 
       default:
         return null;
@@ -57,7 +75,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   }, []);
 
   useEffect(() => {
-    dispatch(fetchArticleById(id));
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchArticleById(id));
+    }
   }, [dispatch, id]);
 
   let content;
@@ -104,7 +124,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
           <Icon Svg={CalendarIcon} />
           <Text text={String(article?.createdAt)} />
         </div>
-        {article?.blocks.map(renderBlock)}
+        {article?.blocks?.map(renderBlock)}
       </>
     );
   }
