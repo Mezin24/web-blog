@@ -15,5 +15,7 @@
   "Введите пароль": "Enter pasword",
   "Форма авторизации": "Authorization Form",
   "Вы ввели неверный пароль": "Incorrect password",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Комментарии": "Commentts",
+  "Комментарии отсутствуют": "No comments yet"
 }
