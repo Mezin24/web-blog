@@ -14,3 +14,4 @@
 - `Loki` - screenshot tests and html reports;
 - `CI Pipeline` - GitHubActions;
 - `Husky` - pre-commit hooks;
+- `Data Normalization` - redux entity adapter'

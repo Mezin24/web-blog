@@ -8,11 +8,14 @@
   "Вызвать ошибку": "Throw Error",
   "Главная": "Main",
   "О нас": "About us",
+  "Статьи": "Articles",
   "Войти": "Login",
   "Выйти": "Logout",
   "Введите username": "Enter username",
   "Введите пароль": "Enter pasword",
   "Форма авторизации": "Authorization Form",
   "Вы ввели неверный пароль": "Incorrect password",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Комментарии": "Commentts",
+  "Комментарии отсутствуют": "No comments yet"
 }

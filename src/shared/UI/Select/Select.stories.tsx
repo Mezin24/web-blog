@@ -23,7 +23,7 @@ Primary.args = {
       content: 'First option',
     },
     {
-      value: '123',
+      value: '1234',
       content: 'Second option',
     },
   ],
