@@ -39,6 +39,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "text": "test comment",
+      "articleId": "1",
+      "userId": "1",
+      "id": "zIOydVx"
+    },
+    {
+      "text": "test comment again",
+      "articleId": "1",
+      "userId": "1",
+      "id": "n9lNaaC"
+    },
+    {
+      "text": "Whats up!",
+      "articleId": "1",
+      "userId": "2",
+      "id": "IpjZv8c"
+    },
+    {
+      "text": "test add comment",
+      "articleId": "1",
+      "userId": "2",
+      "id": "KtB-aZ4"
+    },
+    {
+      "text": "hello world!",
+      "articleId": "1",
+      "userId": "1",
+      "id": "3ReI3Jc"
     }
   ],
   "articles": [
@@ -49,7 +79,9 @@
       "img": "https://apprand.com/wp-naughtycontent/uploads/2015/08/maxresdefault.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -128,14 +160,28 @@
       "avatar": "https://funnyexpo.com/wp-content/uploads/2017/08/Image-1-23.jpg"
     }
   ],
-  "profile": {
-    "name": "Pavel",
-    "lastname": "Mezencev",
-    "age": 36,
-    "currency": "US",
-    "country": "Armenia",
-    "city": "Обнинск",
-    "username": "admin",
-    "avatar": "https://cisoclub.ru/wp-content/uploads/hackerone-hacker-interviews-rhynorater-youtube-thumbnail.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "name": "MaxM",
+      "lastname": "Screecher",
+      "age": 6,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin123",
+      "avatar": "https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Pavel",
+      "lastname": "Mezentcev",
+      "age": 36,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Obninsk",
+      "username": "user",
+      "avatar": "https://funnyexpo.com/wp-content/uploads/2017/08/Image-1-23.jpg"
+    }
+  ]
 }

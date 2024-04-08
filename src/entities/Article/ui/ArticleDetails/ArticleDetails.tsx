@@ -24,6 +24,7 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleDetails.module.scss';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 
 interface ArticleDetailsProps {
   className?: string;
@@ -44,41 +45,41 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
-    case ArticleBlockType.TEXT:
-      return (
-        <ArticleTextBlockComponent
-          block={block}
-          className={cls.block}
-          key={block.id}
-        />
-      );
-    case ArticleBlockType.IMAGE:
-      return (
-        <ArticleImageBlockComponent
-          className={cls.block}
-          block={block}
-          key={block.id}
-        />
-      );
-    case ArticleBlockType.CODE:
-      return (
-        <ArticleCodeBlockComponent
-          className={cls.block}
-          block={block}
-          key={block.id}
-        />
-      );
+      case ArticleBlockType.TEXT:
+        return (
+          <ArticleTextBlockComponent
+            block={block}
+            className={cls.block}
+            key={block.id}
+          />
+        );
+      case ArticleBlockType.IMAGE:
+        return (
+          <ArticleImageBlockComponent
+            className={cls.block}
+            block={block}
+            key={block.id}
+          />
+        );
+      case ArticleBlockType.CODE:
+        return (
+          <ArticleCodeBlockComponent
+            className={cls.block}
+            block={block}
+            key={block.id}
+          />
+        );
 
-    default:
-      return null;
+      default:
+        return null;
     }
   }, []);
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
+  useInitialEffect(() => {
+    if (id) {
       dispatch(fetchArticleById(id));
     }
-  }, [dispatch, id]);
+  });
 
   let content;
 
