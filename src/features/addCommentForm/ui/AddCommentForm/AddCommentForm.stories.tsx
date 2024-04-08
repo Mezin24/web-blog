@@ -1,8 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import AddCommentForm from './AddCommentForm';
 
 export default {
-  title: 'shared/AddCommentForm',
+  title: 'features/AddCommentForm',
   component: AddCommentForm,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -15,3 +16,4 @@ const Template: ComponentStory<typeof AddCommentForm> = (args) => (
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})];

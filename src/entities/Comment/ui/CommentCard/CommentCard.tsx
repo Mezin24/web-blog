@@ -19,7 +19,9 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentCard, {}, [className])}>
+      <div
+        className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+      >
         <div className={cls.header}>
           <Skeleton border='50%' height={30} width={30} />
           <Skeleton height={16} width={100} />
@@ -28,6 +30,8 @@ export const CommentCard = memo((props: CommentCardProps) => {
       </div>
     );
   }
+
+  if (!comment) return null;
 
   return (
     <div className={classNames(cls.CommentCard, {}, [className])}>
