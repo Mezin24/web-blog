@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { getUserAuthData } from 'entities/User';
 import { AppLink, AppLinkTheme } from 'shared/UI/AppLink/AppLink';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { SidebarItemType } from '../../model/item';
+import { SidebarItemType } from '../../model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
