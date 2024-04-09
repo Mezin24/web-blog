@@ -38,6 +38,11 @@ export type ArticleBlock =
   | ArticleCodeBlock
   | ArticleImageBlock;
 
+export enum ArticleView {
+  SMALL = 'SMALL',
+  BIG = 'BIG',
+}
+
 export interface Article {
   id: string;
   title: string;

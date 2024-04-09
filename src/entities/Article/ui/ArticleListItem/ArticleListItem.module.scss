@@ -1,0 +1,57 @@
+.SMALL {
+  width: 230px;
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .createdAt {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .articleTypes p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 3px;
+  }
+
+  .title p {
+    margin-top: 8px;
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.BIG {
+  .card {}
+  .imageWrapper {}
+  .image {}
+  .createdAt {}
+  .info {}
+  .articleTypes {}
+  .views {}
+  .title {}
+}
