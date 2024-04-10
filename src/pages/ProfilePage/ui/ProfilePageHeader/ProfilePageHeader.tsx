@@ -1,16 +1,17 @@
-import { useCallback } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/UI/Button/Button';
-import { Text } from 'shared/UI/Text/Text';
-import { getUserAuthData } from 'entities/User';
-import { useDispatch, useSelector } from 'react-redux';
-import { getProfileReadonly } from 'entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
 import {
   getProfileData,
   profileActions,
   updateProfileData,
 } from 'entities/Profile';
+import { getProfileReadonly } from 'entities/Profile/model/selectors/getProfileReadonly/getProfileReadonly';
+import { getUserAuthData } from 'entities/User';
+import { useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { Button, ButtonTheme } from 'shared/UI/Button/Button';
+import { Text } from 'shared/UI/Text/Text';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
@@ -19,7 +20,7 @@ interface ProfilePageHeaderProps {
 export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   const { t } = useTranslation('profile');
   const readonly = useSelector(getProfileReadonly);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const authData = useSelector(getUserAuthData);
   const profileData = useSelector(getProfileData);
   const canEdit = authData?.id === profileData?.id;

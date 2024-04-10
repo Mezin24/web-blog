@@ -1,21 +1,22 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { Button } from 'shared/UI/Button/Button';
+import { Input } from 'shared/UI/Input/Input';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
   ReducerList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Input } from 'shared/UI/Input/Input';
-import { Button } from 'shared/UI/Button/Button';
-import {
-  addCommentFormActions,
-  addCommentFormReducer,
-} from '../../model/slice/addCommentFormSlice';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import {
   getAddCommentFormError,
   getAddCommentFormText,
 } from '../../model/selectors/getAddCommentFormData';
+import {
+  addCommentFormActions,
+  addCommentFormReducer,
+} from '../../model/slice/addCommentFormSlice';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -32,7 +33,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   const { t } = useTranslation();
   const text = useSelector(getAddCommentFormText);
   const error = useSelector(getAddCommentFormError);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onChangeAddCommentFormText = useCallback(
     (value: string) => {

@@ -3,7 +3,7 @@ import { CommentList } from 'entities/Comment';
 import { AddCommentForm } from 'features/addCommentForm';
 import { FC, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button, ButtonTheme } from 'shared/UI/Button/Button';
 import { Text } from 'shared/UI/Text/Text';
@@ -13,6 +13,7 @@ import {
   DynamicModuleLoader,
   ReducerList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments';
 import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
@@ -37,7 +38,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
   const { id } = useParams<{ id: string }>();
   const comments = useSelector(getArticleComments.selectAll);
   const isLoading = useSelector(getArticleDetailsCommentsIsLoading);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   useInitialEffect(() => {

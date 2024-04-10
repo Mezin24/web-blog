@@ -69,6 +69,24 @@
       "articleId": "1",
       "userId": "1",
       "id": "3ReI3Jc"
+    },
+    {
+      "text": "Great article!",
+      "articleId": "4",
+      "userId": "1",
+      "id": "aPem0I1"
+    },
+    {
+      "text": "I like react!",
+      "articleId": "6",
+      "userId": "1",
+      "id": "UcP7X52"
+    },
+    {
+      "text": "please, continue",
+      "articleId": "6",
+      "userId": "2",
+      "id": "uCRz4qB"
     }
   ],
   "articles": [
@@ -80,7 +98,9 @@
       "views": 122,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -150,7 +170,10 @@
       "views": 678,
       "createdAt": "07.05.2018",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -220,7 +243,9 @@
       "views": 348,
       "createdAt": "01.12.2020",
       "userId": "2",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -290,7 +315,10 @@
       "views": 546,
       "createdAt": "03.04.2021",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -308,11 +336,13 @@
       "id": "5",
       "title": "JSON server",
       "subtitle": "JSON server - fake database",
-      "img": "https://scotch-res.cloudinary.com/image/upload/w_auto,q_auto:good,f_auto/media/1689/S6AHwG1dQDanXVxQX5Up_JSON-SERVER.png.jpg",
+      "img": "https://s3-ap-northeast-1.amazonaws.com/zwh.zone/2018/03/maxresdefault.jpg",
       "views": 791,
       "createdAt": "20.05.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -334,7 +364,10 @@
       "views": 254,
       "createdAt": "14.05.2023",
       "userId": "2",
-      "type": ["IT", "CHEMISTRY"],
+      "type": [
+        "IT",
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -356,7 +389,9 @@
       "views": 201,
       "createdAt": "09.04.2022",
       "userId": "1",
-      "type": ["CHEMISTRY"],
+      "type": [
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -378,7 +413,9 @@
       "views": 1022,
       "createdAt": "26.09.2021",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -400,7 +437,9 @@
       "views": 678,
       "createdAt": "22.09.2023",
       "userId": "2",
-      "type": ["CHEMISTRY"],
+      "type": [
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -422,7 +461,10 @@
       "views": 500,
       "createdAt": "03.04.2021",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -440,11 +482,13 @@
       "id": "11",
       "title": "JSON server 23",
       "subtitle": "JSON server - fake database",
-      "img": "https://scotch-res.cloudinary.com/image/upload/w_auto,q_auto:good,f_auto/media/1689/S6AHwG1dQDanXVxQX5Up_JSON-SERVER.png.jpg",
+      "img": "https://s3-ap-northeast-1.amazonaws.com/zwh.zone/2018/03/maxresdefault.jpg",
       "views": 360,
       "createdAt": "01.10.2023",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -466,7 +510,10 @@
       "views": 1022,
       "createdAt": "29.05.2023",
       "userId": "2",
-      "type": ["IT", "CHEMISTRY"],
+      "type": [
+        "IT",
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -488,7 +535,10 @@
       "views": 330,
       "createdAt": "03.07.2023",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -506,11 +556,13 @@
       "id": "14",
       "title": "JSON server news",
       "subtitle": "JSON server - fake database",
-      "img": "https://scotch-res.cloudinary.com/image/upload/w_auto,q_auto:good,f_auto/media/1689/S6AHwG1dQDanXVxQX5Up_JSON-SERVER.png.jpg",
+      "img": "https://s3-ap-northeast-1.amazonaws.com/zwh.zone/2018/03/maxresdefault.jpg",
       "views": 102,
       "createdAt": "10.01.2021",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -532,7 +584,10 @@
       "views": 1103,
       "createdAt": "14.05.2021",
       "userId": "2",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -554,7 +609,9 @@
       "views": 1118,
       "createdAt": "03.04.2020",
       "userId": "1",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -572,11 +629,14 @@
       "id": "17",
       "title": "JSON server fake api",
       "subtitle": "JSON server - fake database",
-      "img": "https://scotch-res.cloudinary.com/image/upload/w_auto,q_auto:good,f_auto/media/1689/S6AHwG1dQDanXVxQX5Up_JSON-SERVER.png.jpg",
+      "img": "https://s3-ap-northeast-1.amazonaws.com/zwh.zone/2018/03/maxresdefault.jpg",
       "views": 2022,
       "createdAt": "26.02.2019",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -598,7 +658,10 @@
       "views": 982,
       "createdAt": "14.05.2019",
       "userId": "2",
-      "type": ["IT", "CHEMISTRY"],
+      "type": [
+        "IT",
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -620,7 +683,9 @@
       "views": 1022,
       "createdAt": "23.04.2021",
       "userId": "1",
-      "type": ["CHEMISTRY"],
+      "type": [
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -642,7 +707,10 @@
       "views": 1022,
       "createdAt": "24.09.2020",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -660,11 +728,14 @@
       "id": "21",
       "title": "TypeScript basic",
       "subtitle": "TypeScript: JavaScript With Syntax For Types.",
-      "img": "https://yt3.ggpht.com/ytc/AKedOLTbWpqHx9VWBzm37IrtW7OhSsC5KdmbyRSP7Dpz=s900-c-k-c0x00ffffff-no-rj",
+      "img": "https://coursecouponclub.com/wp-content/uploads/2021/06/4003910_bf65_3-2048x1152.jpg",
       "views": 390,
       "createdAt": "22.09.2022",
       "userId": "2",
-      "type": ["SCIENCE", "CHEMISTRY"],
+      "type": [
+        "SCIENCE",
+        "CHEMISTRY"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -686,7 +757,10 @@
       "views": 102,
       "createdAt": "03.04.2023",
       "userId": "1",
-      "type": ["IT", "SCIENCE"],
+      "type": [
+        "IT",
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
