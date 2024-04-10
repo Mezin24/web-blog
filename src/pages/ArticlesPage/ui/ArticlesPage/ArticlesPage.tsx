@@ -21,6 +21,7 @@ import {
 } from '../../model/slice/articlesPageSlice';
 import cls from './ArticlesPage.module.scss';
 import { ArticleViewSelector } from 'features/articleViewSelector';
+import { Page } from 'shared/UI/Page/Page';
 
 interface ArticlesPageProps {
   className?: string;
@@ -39,8 +40,12 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const dispatch = useAppDispatch();
 
   useInitialEffect(() => {
-    dispatch(fetchArticleList());
     dispatch(articlesPageActions.initState());
+    dispatch(
+      fetchArticleList({
+        page: 1,
+      })
+    );
   });
 
   const onChangeView = useCallback(
@@ -52,10 +57,10 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articlesPage, {}, [className])}>
+      <Page className={classNames(cls.articlesPage, {}, [className])}>
         <ArticleViewSelector onViewChange={onChangeView} view={view} />
         <ArticleList view={view} articles={articles} isLoading={isLoading} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };

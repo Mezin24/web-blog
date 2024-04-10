@@ -23,6 +23,7 @@ import {
   getArticleComments,
 } from '../../model/slice/articleDetailsCommentsSlice.';
 import cls from './ArticleDetailsPage.module.scss';
+import { Page } from 'shared/UI/Page/Page';
 
 interface ArticleDetailsPageProps {
   className?: string;
@@ -66,7 +67,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
-      <div className={classNames('', {}, [className])}>
+      <Page className={classNames('', {}, [className])}>
         <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
           {t('Назад к списку')}
         </Button>
@@ -74,7 +75,7 @@ const ArticleDetailsPage: FC<ArticleDetailsPageProps> = (props) => {
         <Text className={cls.commentsTitle} title={t('Комментарии')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
