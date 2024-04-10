@@ -5,9 +5,9 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/getArticleDetails/getArticleDetails';
-import { ArticleType } from 'entities/Article/model/types/article';
+import { Article, ArticleType } from 'entities/Article/model/types/article';
 
-const article = {
+const article: Article = {
   id: '1',
   title: 'Javascript news',
   subtitle: 'Что нового в JS за 2022 год?',
@@ -15,6 +15,12 @@ const article = {
   views: 1022,
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
+  user: {
+    id: '1',
+    username: 'Mezin 24',
+    avatar:
+      'https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg',
+  },
   blocks: [],
 };
 describe('getArticleDetails', () => {
