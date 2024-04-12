@@ -15,3 +15,4 @@
 - `CI Pipeline` - GitHubActions;
 - `Husky` - pre-commit hooks;
 - `Data Normalization` - redux entity adapter'
+- `Infinite scroll` - custom hooks

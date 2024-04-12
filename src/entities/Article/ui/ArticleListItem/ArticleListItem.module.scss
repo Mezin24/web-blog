@@ -1,0 +1,101 @@
+.BIG {
+  .header {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 16px 0;
+  }
+
+  .createdAt {
+    margin-left: auto;
+  }
+
+  .title {
+    margin-top: 12px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  .textBlock {
+    max-height: 200px;
+    overflow-y: hidden;
+  }
+}
+
+.SMALL {
+  width: 230px;
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .createdAt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+  }
+
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+    transition: 0.2s;
+    cursor: pointer;
+
+    .createdAt {
+      display: block;
+    }
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .articleTypes p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .views {
+    margin-left: auto;
+    margin-right: 3px;
+  }
+
+  .title {
+    margin: 8px 0;
+  }
+
+  .title p {
+    width: 115px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -31,6 +31,12 @@ const article = {
   views: 1022,
   createdAt: '26.02.2022',
   type: [ArticleType.IT],
+  user: {
+    id: '1',
+    username: 'Mezin 24',
+    avatar:
+      'https://i.pinimg.com/originals/90/7a/b1/907ab15afa89ef232c9b180fb89b3557.jpg',
+  },
   blocks: [
     {
       id: '1',

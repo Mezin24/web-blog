@@ -1,0 +1,10 @@
+.ArticleViewSelector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.notSelected {
+  opacity: 0.8;
+  fill: var(--secondary-color);
+}

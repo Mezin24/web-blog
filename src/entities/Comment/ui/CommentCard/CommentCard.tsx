@@ -4,6 +4,8 @@ import { Comment } from 'entities/Comment';
 import { Avatar } from 'shared/UI/Avatar/Avatar';
 import { Text } from 'shared/UI/Text/Text';
 import { Skeleton } from 'shared/UI/Skeleton/Skeleton';
+import { AppLink } from 'shared/UI/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import cls from './CommentCard.module.scss';
 
 interface CommentCardProps {
@@ -17,7 +19,9 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.CommentCard, {}, [className])}>
+      <div
+        className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+      >
         <div className={cls.header}>
           <Skeleton border='50%' height={30} width={30} />
           <Skeleton height={16} width={100} />
@@ -27,14 +31,19 @@ export const CommentCard = memo((props: CommentCardProps) => {
     );
   }
 
+  if (!comment) return null;
+
   return (
     <div className={classNames(cls.CommentCard, {}, [className])}>
-      <div className={cls.header}>
+      <AppLink
+        to={`${RoutePath.profile}${comment?.user?.id}`}
+        className={cls.header}
+      >
         {comment?.user?.avatar ? (
           <Avatar size={30} src={comment?.user?.avatar} />
         ) : null}
         <Text title={comment?.user?.username} />
-      </div>
+      </AppLink>
       <Text className={cls.text} text={comment?.text} />
     </div>
   );
