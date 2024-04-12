@@ -39,7 +39,7 @@ describe('loginByUsername', () => {
     const userValue = { id: '1', username: '123' };
     const thunk = new TestAsyncThunk(loginByUsername);
     thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
-    const result = await thunk.createThunk({
+    const result = await thunk.callThunk({
       username: '123',
       password: '123',
     });
@@ -54,7 +54,7 @@ describe('loginByUsername', () => {
   test('error login', async () => {
     const thunk = new TestAsyncThunk(loginByUsername);
     thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.createThunk({
+    const result = await thunk.callThunk({
       username: '123',
       password: '123',
     });
