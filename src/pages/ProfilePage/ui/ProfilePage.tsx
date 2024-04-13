@@ -16,7 +16,7 @@ import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { Page } from 'shared/UI/Page/Page';
+import { Page } from 'widgets/Page';
 import { Text, TextTheme } from 'shared/UI/Text/Text';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {

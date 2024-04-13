@@ -9,10 +9,12 @@ import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { CombinedState, Reducer, ReducersMapObject } from 'redux';
+import { SavePageSchema } from 'widgets/Page';
 
 export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
+  savePage: SavePageSchema;
   // Async reducers
   loginForm?: LoginSchema;
   profile?: ProfileSchema;

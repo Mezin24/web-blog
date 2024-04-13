@@ -4,7 +4,7 @@ import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNe
 import { initArticlesPage } from 'pages/ArticlesPage/model/services/initArticlesPage/initArticlesPage';
 import { FC, memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Page } from 'shared/UI/Page/Page';
+import { Page } from 'widgets/Page';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
