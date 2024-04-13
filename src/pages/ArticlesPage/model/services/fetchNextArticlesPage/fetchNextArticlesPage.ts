@@ -4,9 +4,9 @@ import {
   getArticlesPageHasMore,
   getArticlesPageIsLoading,
   getArticlesPagePage,
-} from '../selectors/getArticlesPageData';
-import { articlesPageActions } from '../slice/articlesPageSlice';
-import { fetchArticleList } from './fetchArticlesList';
+} from '../../selectors/getArticlesPageData';
+import { articlesPageActions } from '../../slice/articlesPageSlice';
+import { fetchArticleList } from '../fetchArticlesList/fetchArticlesList';
 
 export const fetchNextArticlesPage = createAsyncThunk<
   void,

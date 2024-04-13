@@ -18,3 +18,6 @@ export const getArticlesPageView = (state: StateSchema) =>
 
 export const getArticlesPageError = (state: StateSchema) =>
   state.articlesPage?.error || '';
+
+export const getArticlesPageInited = (state: StateSchema) =>
+  state.articlesPage?._inited || false;

@@ -6,7 +6,7 @@ import {
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Article, ArticleView } from 'entities/Article';
 import { LOCAL_STORAGE_ARTICLE_LIST_KEY } from 'shared/lib/const/localStorage';
-import { fetchArticleList } from '../services/fetchArticlesList';
+import { fetchArticleList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 
 const articlesPageAdapter = createEntityAdapter({
@@ -23,6 +23,7 @@ const articlesPageSlice = createSlice({
     view: ArticleView.SMALL,
     page: 1,
     hasMore: true,
+    _inited: false,
   }),
   reducers: {
     setView: (state, { payload }: PayloadAction<ArticleView>) => {
@@ -37,6 +38,7 @@ const articlesPageSlice = createSlice({
         LOCAL_STORAGE_ARTICLE_LIST_KEY
       ) as ArticleView;
       state.limit = state.view === ArticleView.BIG ? 4 : 9;
+      state._inited = true;
     },
   },
   extraReducers: (builder) => {
