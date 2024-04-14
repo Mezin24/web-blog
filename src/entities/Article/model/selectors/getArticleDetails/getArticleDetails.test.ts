@@ -5,7 +5,7 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsLoading,
 } from 'entities/Article/model/selectors/getArticleDetails/getArticleDetails';
-import { Article, ArticleType } from 'entities/Article/model/types/article';
+import { Article, ArticleType } from 'entities/Article';
 
 const article: Article = {
   id: '1',

@@ -1,4 +1,5 @@
 import { ArticleView } from 'entities/Article';
+import { ArticleSortField } from 'entities/Article';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { fetchArticleList } from '../fetchArticlesList/fetchArticlesList';
 import { initArticlesPage } from './initArticlesPage';
@@ -17,6 +18,9 @@ describe('initArticlesPage', () => {
         isLoading: false,
         view: ArticleView.SMALL,
         _inited: false,
+        sort: ArticleSortField.CREATED,
+        search: '',
+        order: 'asc',
       },
     });
     await thunk.callThunk();
@@ -36,6 +40,9 @@ describe('initArticlesPage', () => {
         isLoading: false,
         view: ArticleView.SMALL,
         _inited: true,
+        sort: ArticleSortField.CREATED,
+        search: '',
+        order: 'asc',
       },
     });
     await thunk.callThunk();
